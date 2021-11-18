@@ -395,36 +395,9 @@
       grid-template-columns: 1fr 1fr 1fr;
 }
 
-.footer .dad div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-}
-
-.footer .dad div h1 {
-  text-align: center;
-  padding: 5% 0;
-}
-
-.footer .dad div a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.footer .dad div a img {
-  width: 5%;
-}
-
-.footer .info-bottom {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
-.footer .info-bottom div {
+.footer .dad ul li {
+  list-style: none;
+  margin: 10% 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,5 +407,68 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer .dad ul li h1 {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.footer .dad ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+.footer .dad ul li .link-contato {
+  width: 50%;
+}
+
+.footer .dad ul li .link-contato .img-contato {
+  width: 25px;
+  height: 25px;
+  margin-right: 2%;
+}
+
+.footer .dad ul li .link-imgs {
+  width: 25px;
+  height: 25px;
+}
+
+.footer .info-bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.footer .info-bottom .div1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+}
+
+.footer .info-bottom .div2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,189 @@
+@media only screen and (max-width: 600px) {
+  .header {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 2% 5%;
+  }
+  .header .logo #logo-img {
+    width: 14vw;
+  }
+  .header .menu {
+    display: none;
+    padding: 0;
+  }
+  .header .menu a {
+    font-size: .8em;
+  }
+  .header .login {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .login #register {
+    width: 60%;
+    height: 30px;
+  }
+  .home {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .1fr .1fr;
+        grid-template-rows: .1fr .1fr;
+    background-repeat: repeat;
+  }
+  .home .left-info {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .1fr 1fr;
+        grid-template-rows: .1fr 1fr;
+  }
+  .home .left-info #phrase {
+    padding: 5%;
+    font-size: 1em;
+  }
+  .home .left-info .carousel {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2%;
+  }
+  .home .left-info .carousel .slide {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+  .home .right-info {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .2fr .1fr;
+        grid-template-rows: .2fr .1fr;
+  }
+  .home .right-info .container-info {
+    padding: 2%;
+  }
+  .home .right-info .container-info .info {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  .home .right-info .container-info .info h1 {
+    padding: 2%;
+    font-size: 1.2em;
+  }
+  .home .right-info .container-info .info p {
+    font-size: .8em;
+  }
+  .services {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .1fr .1fr;
+        grid-template-rows: .1fr .1fr;
+    padding: 2%;
+    height: 100%;
+    background-image: none;
+  }
+  .services .text-service {
+    font-size: 1.2em;
+  }
+  .services .all-cards {
+    display: -ms-grid;
+    display: grid;
+    padding: 4%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .services .all-cards .card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-bottom: 4%;
+    -ms-grid-rows: .1fr .1fr .1fr;
+        grid-template-rows: .1fr .1fr .1fr;
+  }
+  .services .all-cards .card .btn #btn-access {
+    padding: 2%;
+  }
+  .are {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .are .whoweare #question {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .are .whoweare #text {
+    padding: 5%;
+    font-size: 1em;
+  }
+  .are .img-whoweare {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .are .img-whoweare img {
+    width: 100%;
+  }
+  .footer {
+    -ms-grid-rows: 1fr .2fr;
+        grid-template-rows: 1fr .2fr;
+    background-image: none;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .dad {
+    -ms-grid-columns: .8fr .8fr 1fr;
+        grid-template-columns: .8fr .8fr 1fr;
+    -ms-grid-rows: .1fr .1f;
+        grid-template-rows: .1fr .1f;
+    padding: 0%;
+  }
+  .footer .dad ul {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .footer .dad ul li {
+    list-style: none;
+    font-size: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10% 0%;
+  }
+  .footer .dad ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: .7em;
+    text-decoration: none;
+  }
+  .footer .dad ul li a img {
+    width: 15%;
+    margin-left: 2%;
+  }
+  .footer .dad ul li a .img-contato {
+    margin-right: 10px;
+  }
+  .footer .info-bottom {
+    -ms-grid-columns: 1fr 1.3fr;
+        grid-template-columns: 1fr 1.3fr;
+  }
+  .footer .info-bottom div {
+    font-size: .7em;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

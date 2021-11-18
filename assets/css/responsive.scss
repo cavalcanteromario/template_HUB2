@@ -26,6 +26,7 @@
     }
 
     .home {
+        height: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: .1fr .1fr;
         background-repeat: repeat;
@@ -74,6 +75,7 @@
     }
 
     .services {
+        height: 100%;
         grid-template-columns: 1fr;
         grid-template-rows: .1fr .1fr; 
         padding: 2%;
@@ -104,6 +106,7 @@
     }
 
     .are {
+        height: 100%;
         grid-template-columns: 1fr;
         height: 100%;
 
@@ -129,7 +132,7 @@
     }
 
     .footer {
-
+        height: 100%;
         grid-template-rows: 1fr .2fr;
         background-image: none;
         padding: 0;

@@ -8,163 +8,283 @@
     <title>Hub</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/font.css">
 </head>
 
 <body>
-    <section class="header" id="header">
-        <div class="logo"><img id="logo-img" src="assets/img/logo/hub.png" alt="logo"></div>
-        <div class="menu">
-            <a id="home" href="#header">Home</a>
-            <a id="services" href="#services">Serviços</a>
-            <a id="are" href="#are">Quem somos</a>
-            <a id="contact" href="#footer">Contato</a>
-        </div>
-        <div class="login">
-            <a id="access" href="">Login</a>
-            <button id="register">Cadastre-se</button>
-        </div>
-    </section>
-    <section class="home">
-        <div class="left-info">
-            <div id="phrase"> Conheça nossos serviços e tenha acesso exclusivo em um só lugar</div>
-            <div class="carousel">
-                <div class="slide"><img id="img-carousel" src="assets/img/banner/deezer.png" alt="img-carousel"></div>
-                <div class="slide hide"><img id="img-carousel" src="assets/img/banner/ixcsoft.jpg" alt="img-carousel">
-                </div>
-                <div class="slide hide"><img id="img-carousel" src="assets/img/banner/looke.jpg" alt="img-carousel">
-                </div>
-                <div class="slide hide">Voale</div>
+    <main>
+        <header>
+            <div class="logo">
+                <h2>
+                    <a href="">HUB</a>
+                </h2>
             </div>
-        </div>
-        <div class="right-info">
-            <div class="vazio"></div>
-            <div class="container-info">
-                <div class="info">
-                    <h1>Mais de 70 milhões de músicas, playlists e podcasts.</h1>
-                    <p>A Deezer é um aplicativo de streaming musical que oferece acesso a mais de 73 milhões de faixas
-                        do mundo todo, além de outros conteúdos, como podcasts. Você inclusive recebe recomendações
-                        personalizadas e Deezer Originals exclusivos.</p>
-                    <button>Saiba Mais</button>
+            <div class="btn-toggler">
+                <input id="menu-hamburguer" type="checkbox">
+                <label for="menu-hamburguer">
+                    <div class="hamburguer" id="btn-hamburguer"></div>
+                </label>
+            </div>
+            <div class="menu hide" id="menu">
+                <div>
+                    <a id="link-menu" onclick="clicanolinkmenu();" href="#services">Serviços</a>
+                    <a id="link-menu" onclick="clicanolinkmenu();" href="#are">Quem somos</a>
+                    <a id="link-menu" onclick="clicanolinkmenu();" href="#footer">Contato</a>
                 </div>
             </div>
-        </div>
+            <div class="login-area">
+                <a id="access" href="">Login</a>
+                <button id="register">Cadastre-se</button>
+            </div>
+        </header>
 
-    </section>
-    <section class="services" id="services">
-        <div class="text-service">Serviços Disponíveis</div>
-        <div class="all-cards">
-            <div class="card">
-                <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
-                <div id="text-body-card">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio reprehenderit cumque quod sit
-                    suscipit
-                    magnam sint in consequuntur quo sed, ducimus rerum incidunt itaque doloremque. Non dolor provident
-                    incidunt rem.
+        <section class="home">
+            <div class="phrase"> Conheça nossos serviços e tenha acesso exclusivo em um só lugar</div>
+            <div class="content-home">
+                <div class="left-info">
+                    <div class="carousel">
+                        <div class="slide"><img id="img-carousel" src="assets/img/banner/deezer.png" alt="img-carousel">
+                        </div>
+                        <div class="slide hide"><img id="img-carousel" src="assets/img/banner/ixcsoft.jpg"
+                                alt="img-carousel">
+                        </div>
+                        <div class="slide hide"><img id="img-carousel" src="assets/img/banner/looke.jpg"
+                                alt="img-carousel">
+                        </div>
+                        <div class="slide hide">Voale</div>
+                    </div>
                 </div>
-                <div class="btn"><button id="btn-access">Acessar</button></div>
-            </div>
-            <div class="card">
-                <div id="header-card"><img src="assets/img/banner/looke.jpg" alt=""></div>
-                <div id="text-body-card">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio reprehenderit cumque quod sit
-                    suscipit
-                    magnam sint in consequuntur quo sed, ducimus rerum incidunt itaque doloremque. Non dolor provident
-                    incidunt rem.
+                <div class="right-info">
+                    <div class="container-info">
+                        <div class="info">
+                            <h1>Mais de 70 milhões de músicas, playlists e podcasts.</h1>
+                            <p>A Deezer é um aplicativo de streaming musical que oferece acesso a mais de 73 milhões de
+                                faixas
+                                do mundo todo, além de outros conteúdos, como podcasts. Você inclusive recebe
+                                recomendações
+                                personalizadas e Deezer Originals exclusivos. <a href="">Saiba mais.</a> </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="btn"><button id="btn-access">Acessar</button></div>
-            </div>
-            <div class="card">
-                <div id="header-card"><img src="assets/img/banner/voale.png" alt=""></div>
-                <div id="text-body-card">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio reprehenderit cumque quod sit
-                    suscipit
-                    magnam sint in consequuntur quo sed, ducimus rerum incidunt itaque doloremque. Non dolor provident
-                    incidunt rem.
-                </div>
-                <div class="btn"><button id="btn-access">Acessar</button></div>
-            </div>
-            <div class="card">
-                <div id="header-card">IXC</div>
-                <div id="text-body-card">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio reprehenderit cumque quod sit
-                    suscipit
-                    magnam sint in consequuntur quo sed, ducimus rerum incidunt itaque doloremque. Non dolor provident
-                    incidunt rem.
-                </div>
-                <div class="btn"><button id="btn-access">Acessar</button></div>
             </div>
 
-        </div>
-    </section>
-    <section class="are" id="are">
-        <div class="whoweare">
-            <div>
-                <div id="question">Quem somos ?</div>
-                <div id="text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem molestiae ducimus veritatis
-                    dolorem
-                    impedit qui nostrum ut fuga expedita, deleniti tenetur hic, dolores, modi accusamus. Nesciunt
-                    eveniet
-                    quo quas unde.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem molestiae ducimus veritatis
-                    dolorem
-                    impedit qui nostrum ut fuga expedita, deleniti tenetur hic, dolores, modi accusamus. Nesciunt
-                    eveniet
-                    quo quas unde.
+        </section>
+
+        <section class="services" id="services">
+            <div class="text-service">Serviços Disponíveis</div>
+            <div class="all-cards">
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
                 </div>
 
+
             </div>
-        </div>
-        <div class="img-whoweare"><img src="assets/img/banner/hub.png" alt="img quem somos"></div>
-    </section>
+        </section>
 
-    <footer class="footer" id="footer">
-        <div class="dad">
-            <ul>
-                <li>
-                    <h1>Serviços</h1>
-                </li>
-                <li><a href=""> IXCsoft </a></li>
-                <li><a href=""> Deezer </a></li>
-                <li><a href=""> Looke </a></li>
-                <li><a href=""> Voale </a></li>
-            </ul>
-            <ul>
-                <li>
-                    <h1>Redes Sociais</h1>
-                </li>
-                <li>
-                    <a class="link-imgs" href=""> <img src="assets/img/icon/facebook.png" alt=""> </a>
-                </li>
-                <li>
-                    <a class="link-imgs" href=""> <img src="assets/img/icon/twitter.png" alt=""> </a>
-                </li>
-                <li>
-                    <a class="link-imgs" href=""> <img src="assets/img/icon/instagram.png" alt=""> </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h1> Contato </h1>
-                </li>
-                <li>
-                    <a class="link-contato" href=""> <img class="img-contato" src="assets/img/icon/contato.png" alt="">
-                        (63) 99999 - 9999 </a>
-                </li>
-                <li>
-                    <a class="link-contato" href=""> <img class="img-contato" src="assets/img/icon/whatsapp.png" alt="">
-                        (63) 99999 - 9999 </a>
-                </li>
-            </ul>
+        <section class="are" id="are">
+            <div class="whoweare">
+                <div>
+                    <div id="question">Quem somos ?</div>
+                    <div id="text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem molestiae ducimus veritatis
+                        dolorem
+                        impedit qui nostrum ut fuga expedita, deleniti tenetur hic, dolores, modi accusamus. Nesciunt
+                        eveniet
+                        quo quas unde.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem molestiae ducimus veritatis
+                        dolorem
+                        impedit qui nostrum ut fuga expedita, deleniti tenetur hic, dolores, modi accusamus. Nesciunt
+                        eveniet
+                        quo quas unde.
+                    </div>
+                </div>
+            </div>
+            <div class="img-whoweare"><img src="assets/img/banner/hub.png" alt="img quem somos"></div>
+        </section>
 
-        </div>
+        <footer id="footer">
+            <div class="data">
+                <table>
+                    <tr>
+                        <th colspan="2">
+                            <h3>Serviços</h3>
+                        </th>
+                        <th>
+                            <h3>Redes Sociais</h3>
+                        </th>
+                        <th>
+                            <h3>Contato</h3>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">IXCsoft</a>
+                        </td>
+                        <td>
+                            <a href="">Voale</a>
+                        </td>
+                        <td>
+                            <a class="link-imgs" href="">
+                                <img src="assets/img/icon/facebook.png" alt="">
+                            </a>
+                            <a class="link-imgs" href="">
+                                <img src="assets/img/icon/instagram.png" alt="">
+                            </a>
+                            <a class="link-imgs" href="">
+                                <img src="assets/img/icon/twitter.png" alt="">
+                            </a>
+                        </td>
+                        <td>
+                            <div class="link-contato">
+                                <a id="contato" href="">
+                                    <img class="img-contato" src="assets/img/icon/contato.png" alt="">
+                                    (63) 99999 - 9999
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">
+                                <a href="">Looke</a>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="">
+                                <a href="">Deezer</a>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="link-contato">
+                                <a id="contato" href="">
+                                    <img class="img-contato" src="assets/img/icon/contato.png" alt="">
+                                    (63) 99999 - 9999
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                </ul>
+            </div>
 
-        <div class="info-bottom">
-            <div class="div1">Powered by IDCorpBrasil</div>
-            <div class="div2">©️2021 Todos os direitos reservados.</div>
-        </div>
-    </footer>
+            <div class="info-bottom">
+                <div> Powered by IDCorpBrasil ©️2021 Todos os direitos reservados. </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/index.js"></script>
 </body>
-<script src="assets/js/index.js"></script>
 
 </html>

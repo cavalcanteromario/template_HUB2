@@ -1,0 +1,80 @@
+@-webkit-keyframes headerScrollUp {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes headerScrollUp {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes headerScrollDown {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes headerScrollDown {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 100%;
+  }
+}
+/*# sourceMappingURL=transitions.css.map */

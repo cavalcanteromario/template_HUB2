@@ -1,0 +1,19 @@
+// Animation to scroll header
+@keyframes headerScrollUp {
+    from { opacity: 0; top: -50px;}
+    to {opacity: 1; top: 0px;}
+}
+@keyframes headerScrollDown {
+    from { opacity: 0; top: -50px;}
+    to {opacity: 1; top: 0px;}
+}
+
+@keyframes slideLeft {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+@keyframes slideRight {
+    from {right: 0px;}
+    to {right: 100%;}
+}

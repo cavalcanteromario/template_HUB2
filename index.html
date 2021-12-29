@@ -8,6 +8,7 @@
     <title>Hub</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/transitions.css">
     <link rel="stylesheet" href="assets/css/font.css">
 </head>
 
@@ -15,17 +16,20 @@
     <main>
         <header>
             <div class="logo">
-                <h2>
+                <div>
+                    <img src="assets/img/logo/cube.png" alt="">
                     <a href="">HUB</a>
-                </h2>
+                </div>
             </div>
             <div class="btn-toggler">
                 <input id="menu-hamburguer" type="checkbox">
                 <label for="menu-hamburguer">
-                    <div class="hamburguer" id="btn-hamburguer"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </label>
             </div>
-            <div class="menu hide" id="menu">
+            <div class="menu" id="menu">
                 <div>
                     <a id="link-menu" onclick="clicanolinkmenu();" href="#services">Serviços</a>
                     <a id="link-menu" onclick="clicanolinkmenu();" href="#are">Quem somos</a>
@@ -38,32 +42,30 @@
             </div>
         </header>
 
-        <section class="home">
+        <section class="fixedHome"></section>
+
+        <section class="home" id="home">
+
+            <img src="assets/img/logo/background.jpg" alt="" id="background-img-home">
+            <div class="shadow"></div>
+
             <div class="phrase"> Conheça nossos serviços e tenha acesso exclusivo em um só lugar</div>
+
             <div class="content-home">
-                <div class="left-info">
-                    <div class="carousel">
-                        <div class="slide"><img id="img-carousel" src="assets/img/banner/deezer.png" alt="img-carousel">
-                        </div>
-                        <div class="slide hide"><img id="img-carousel" src="assets/img/banner/ixcsoft.jpg"
-                                alt="img-carousel">
-                        </div>
-                        <div class="slide hide"><img id="img-carousel" src="assets/img/banner/looke.jpg"
-                                alt="img-carousel">
-                        </div>
-                        <div class="slide hide">Voale</div>
-                    </div>
+                <div class="carousel" id="carousel">
+                    <img id="img-carousel" src="assets/img/banner/deezer.png" alt="img-carousel">
+                    <img id="img-carousel" src="assets/img/banner/ixcsoft.jpg" alt="img-carousel">
+                    <img class="img-carousel" src="assets/img/banner/looke.jpg" alt="img-carousel">
+                    <div class="buttons" id="slide-buttons"></div>
                 </div>
-                <div class="right-info">
-                    <div class="container-info">
-                        <div class="info">
-                            <h1>Mais de 70 milhões de músicas, playlists e podcasts.</h1>
-                            <p>A Deezer é um aplicativo de streaming musical que oferece acesso a mais de 73 milhões de
-                                faixas
-                                do mundo todo, além de outros conteúdos, como podcasts. Você inclusive recebe
-                                recomendações
-                                personalizadas e Deezer Originals exclusivos. <a href="">Saiba mais.</a> </p>
-                        </div>
+                <div class="container-info">
+                    <div class="info">
+                        <h1>Mais de 70 milhões de músicas, playlists e podcasts.</h1>
+                        <p>A Deezer é um aplicativo de streaming musical que oferece acesso a mais de 73 milhões de
+                            faixas
+                            do mundo todo, além de outros conteúdos, como podcasts. Você inclusive recebe
+                            recomendações
+                            personalizadas e Deezer Originals exclusivos. <a href="">Saiba mais.</a> </p>
                     </div>
                 </div>
             </div>
@@ -71,6 +73,8 @@
         </section>
 
         <section class="services" id="services">
+            <img src="assets/img/logo/background2.jpg" alt="" id="background-img-services">
+            <div class="shadow"></div>
             <div class="text-service">Serviços Disponíveis</div>
             <div class="all-cards">
                 <div class="card">
@@ -191,6 +195,8 @@
         </section>
 
         <section class="are" id="are">
+            <img src="assets/img/logo/background3.jpg" alt="" id="background-img-are">
+            <div class="shadow"></div>
             <div class="whoweare">
                 <div>
                     <div id="question">Quem somos ?</div>
@@ -212,6 +218,8 @@
         </section>
 
         <footer id="footer">
+            <img src="assets/img/logo/background4.jpg" alt="" id="background-img-footer">
+            <div class="shadow"></div>
             <div class="data">
                 <table>
                     <tr>

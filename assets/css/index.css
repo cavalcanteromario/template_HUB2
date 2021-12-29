@@ -9,19 +9,32 @@
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: .1fr 1fr 1fr 1fr 1fr;
 }
 
 main header {
   display: -ms-grid;
   display: grid;
+  padding: 1rem;
+  width: 100%;
   -ms-grid-columns: .5fr 6fr 1fr;
       grid-template-columns: .5fr 6fr 1fr;
-  background-color: lightseagreen;
+  position: absolute;
+  z-index: 2;
 }
 
 main header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main header .logo div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,13 +46,22 @@ main header .logo {
           align-items: center;
 }
 
-main header .logo h2 a {
-  text-decoration: none;
+main header .logo div img {
+  width: clamp(0px, 100%, 40px);
+}
+
+main header .logo div a {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 5%;
 }
 
 main header .logo img {
-  width: clamp(14px, 14vw, 70px);
+  width: clamp(10px, 14vw, 70px);
 }
 
 main header .btn-toggler {
@@ -47,16 +69,16 @@ main header .btn-toggler {
 }
 
 main header .menu {
-  padding: 0% 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 0% 25%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main header .menu div {
@@ -64,31 +86,59 @@ main header .menu div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main header .menu div a {
-  font-size: clamp(13px, 1vw, 25px);
+  font-size: clamp(13px, 1vw, 17px);
   text-decoration: none;
-  color: black;
+  color: white;
+  text-shadow: 1px 1px black;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  position: relative;
+}
+
+main header .menu div a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+main header .menu div a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 main header .login-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: clamp(13px, 1vw, 25px);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: clamp(13px, 0.8vw, 25px);
+  background-color: rgba(223, 223, 223, 0.5);
+  border-radius: 50px 50px 50px 50px;
 }
 
 main header .login-area #access {
@@ -98,53 +148,109 @@ main header .login-area #access {
 
 main header .login-area #register {
   width: 50%;
-  height: 80%;
-  border-radius: 5px;
+  height: 70%;
   border: none;
-  font-size: clamp(13px, 0.8vw, 20px);
   cursor: pointer;
+  border-radius: 5px;
+  font-size: clamp(13px, 0.7vw, 20px);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  background-color: rgba(223, 223, 223, 0.5);
+}
+
+main header .login-area #register:hover {
+  background-color: rgba(32, 178, 171, 0.664);
+  color: white;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+  text-shadow: 0.2px 0.2px black;
 }
 
 main header .login-area #register:hover:active {
   outline: 1px solid white;
 }
 
+main .headerFixedDown {
+  -webkit-animation: headerScrollDown .5s ease forwards;
+          animation: headerScrollDown .5s ease forwards;
+}
+
+main .headerFixedUp {
+  -webkit-animation: headerScrollUp .5s ease forwards;
+          animation: headerScrollUp .5s ease forwards;
+}
+
+main .fixedHome {
+  width: 100%;
+  height: 100vh;
+}
+
 main .home {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: .1fr 3fr;
-      grid-template-rows: .1fr 3fr;
+  height: 100vh;
+  z-index: 0;
+  color: white;
+  position: fixed;
+}
+
+main .home #background-img-home {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main .home .shadow {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .1;
+  background-color: black;
+  z-index: -1;
 }
 
 main .home .phrase {
+  padding: 3% 0 2% 0;
+  cursor: default;
+  font-size: clamp(1px, 1rem, 18px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 4% 0;
-  cursor: default;
-  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-shadow: 1px 1px black;
+  margin-right: 5%;
 }
 
 main .home .content-home {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100vw;
+  z-index: 0;
+  padding: 0% 4%;
+  margin-bottom: 2%;
 }
 
-main .home .content-home .left-info .carousel {
-  padding: 0% 5% 5% 5%;
+main .home .content-home .carousel {
+  width: 100%;
+  height: 62vh;
+  z-index: 1;
 }
 
-main .home .content-home .left-info .carousel .slide {
+main .home .content-home .carousel .slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,59 +260,111 @@ main .home .content-home .left-info .carousel .slide {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
 }
 
-main .home .content-home .left-info .carousel .slide img {
+main .home .content-home .carousel .slide img {
   width: 100%;
+  height: 100%;
 }
 
-main .home .content-home .left-info .carousel .hide {
+main .home .content-home .carousel .hide {
   display: none;
 }
 
-main .home .content-home .right-info {
-  padding: 0% 10% 0 0;
+main .home .content-home .carousel .slide-left {
+  -webkit-animation: slideLeft 2s easy forwards;
+          animation: slideLeft 2s easy forwards;
 }
 
-main .home .content-home .right-info .container-info .info {
+main .home .content-home .carousel .slide-right {
+  -webkit-animation: slideRight 2s easy forwards;
+          animation: slideRight 2s easy forwards;
+}
+
+main .home .content-home .container-info {
+  background-color: rgba(0, 0, 0, 0.664);
+  padding: 3%;
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+main .home .content-home .container-info .info {
   cursor: default;
 }
 
-main .home .content-home .right-info .container-info .info h1 {
-  padding: 0 5%;
+main .home .content-home .container-info .info h1 {
+  text-align: center;
 }
 
-main .home .content-home .right-info .container-info .info p {
-  font-size: 1.2rem;
+main .home .content-home .container-info .info p {
+  font-size: clamp(1px, 1rem, 18px);
   text-align: justify;
-  padding: 5% 8%;
+  padding: 5% 6%;
 }
 
-main .home .content-home .right-info .container-info .info p a {
+main .home .content-home .container-info .info p a {
   text-decoration: none;
+}
+
+main .homeScroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
 }
 
 main .services {
   display: -ms-grid;
   display: grid;
-  background-color: lightseagreen;
+  background-color: white;
+  z-index: 1;
+  height: 100vh;
+  padding: 7% 5%;
+  position: relative;
+  z-index: 1;
+}
+
+main .services #background-img-services {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+main .services .shadow {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .1;
+  background-color: black;
+  z-index: 0;
 }
 
 main .services .text-service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2rem;
-  font-size: 1.5rem;
-  background-color: orange;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: black;
+  text-shadow: 1px 0.5px rgba(0, 0, 0, 0.295);
+  border-bottom: 1px solid lightgray;
+  z-index: 1;
 }
 
 main .services .all-cards {
   height: 100%;
-  background-color: rebeccapurple;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,16 +373,17 @@ main .services .all-cards {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 5rem;
+  padding: 3rem;
+  z-index: 1;
 }
 
 main .services .all-cards .card {
-  width: 350px;
-  height: 380px;
+  width: 270px;
+  height: 300px;
   background-color: white;
   margin: 1rem;
-  -webkit-box-shadow: 1px 1px 9px black;
-          box-shadow: 1px 1px 9px black;
+  -webkit-box-shadow: 1px 1px 4px lightgray;
+          box-shadow: 1px 1px 4px lightgray;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -241,7 +400,7 @@ main .services .all-cards .card #header-card img {
 main .services .all-cards .card #text-body-card {
   height: 45%;
   text-align: justify;
-  padding: 3% 5%;
+  padding: 2.5%;
   cursor: default;
   display: -ms-grid;
   display: grid;
@@ -257,20 +416,19 @@ main .services .all-cards .card #text-body-card span {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 main .services .all-cards .card #text-body-card p {
   padding: 2%;
   font-size: .8rem;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 main .services .all-cards .card #text-body-card .area-access {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -294,12 +452,13 @@ main .services .all-cards .card #text-body-card .area-access a {
           align-items: center;
   font-size: .8rem;
   color: black;
-  padding: 2.3%;
+  padding: 2%;
 }
 
 main .services .all-cards .card #text-body-card .area-access a:hover {
-  background-color: lightblue;
+  background-color: #006e92;
   font-weight: bold;
+  color: white;
 }
 
 main .services .all-cards .card #text-body-card .area-access button {
@@ -330,7 +489,31 @@ main .are {
   display: grid;
   -ms-grid-columns: 1.5fr 1fr;
       grid-template-columns: 1.5fr 1fr;
-  padding: 1%;
+  padding: 10%;
+  height: 100vh;
+  z-index: 1;
+  background-color: #9e9e9e;
+  position: relative;
+}
+
+main .are #background-img-are {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+main .are .shadow {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .1;
+  background-color: black;
+  z-index: 0;
 }
 
 main .are .whoweare {
@@ -370,10 +553,11 @@ main .are .img-whoweare {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #dddddd;
 }
 
 main .are .img-whoweare img {
-  width: 70%;
+  width: 100%;
 }
 
 main footer {
@@ -384,7 +568,30 @@ main footer {
           align-items: flex-end;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  background-color: whitesmoke;
+  background-color: #7a7a7a;
+  z-index: 1;
+  height: 100vh;
+  position: relative;
+}
+
+main footer #background-img-footer {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+main footer .shadow {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .1;
+  background-color: #0400ff;
+  z-index: 1;
 }
 
 main footer .data {
@@ -397,6 +604,7 @@ main footer .data {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  z-index: 2;
 }
 
 main footer .data table {
@@ -463,7 +671,8 @@ main footer .info-bottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background-color: lightseagreen;
+  background-color: rgba(122, 122, 122, 0.1);
+  z-index: 2;
 }
 
 main footer .info-bottom div {

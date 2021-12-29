@@ -1,36 +1,28 @@
-var i = 0;
-document.getElementById('btn-hamburguer').addEventListener('click', () => {
-    if (i == 0) {
-        console.log('é zero!');
-        document.getElementById('menu').classList.remove('hide');
-        document.getElementById('menu').classList.add('show');     
-        i++;
+// scroll position to navbar
+
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    if (scroll > 700) {
+        document.querySelector("header").style.position = "fixed";
+        document.querySelector("header").classList.add("headerFixedDown");
+        document.querySelector("header").classList.remove("headerFixedUp");
+
     } else {
-        console.log('não é zero!');
-        document.getElementById('menu').classList.remove('show');
-        document.getElementById('menu').classList.add('hide');
-        i--;
+        document.querySelector("header").style.position = "absolute";
+        document.querySelector("header").classList.remove("headerFixedDown");
+        document.querySelector("header").classList.add("headerFixedUp");
     }
 });
 
-function clicanolinkmenu() {
-    document.getElementById('menu').classList.remove('show');
-    document.getElementById('menu').classList.add('hide');
-}
+var img1 = document.getElementById("img-carousel1");
+var img2 = document.getElementById("img-carousel2");
+var img3 = document.getElementById("img-carousel3");
 
-document.getElementById("btn-hamburguer").addEventListener('click', () => {
-    const toggleLeft = document.getElementById("btn-left");
-    const toggleRight = document.getElementById('btn-right');
-    const left = toggleLeft.classList.add('active');
-    const right = toggleLeft.classList.add('active');
-    // console.log('ok');
-    console.log(toggleLeft);
-    console.log(toggleRight);
-    console.log(left);
-    console.log(right);
-    const a = document.getElementById("btn-left");
-    const b = document.getElementById('btn-right');
-    console.log('left',toggleLeft1, a);
-    console.log('right',toggleRight1, b);
+var slidebtn = document.getElementById("slide-buttons");
+var btn = document.createElement("button");
 
-})
+slidebtn.appendChild(btn);
+
+var carousel = document.getElementById("carousel").children;
+
+console.log(carousel);

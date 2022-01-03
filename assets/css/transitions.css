@@ -44,37 +44,45 @@
 
 @-webkit-keyframes slideLeft {
   from {
-    left: 0px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.11);
   }
   to {
-    left: 200px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
 @keyframes slideLeft {
   from {
-    left: 0px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.11);
   }
   to {
-    left: 200px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
 @-webkit-keyframes slideRight {
   from {
-    right: 0px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.11);
   }
   to {
-    right: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
 @keyframes slideRight {
   from {
-    right: 0px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.11);
   }
   to {
-    right: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 /*# sourceMappingURL=transitions.css.map */

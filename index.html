@@ -31,9 +31,10 @@
             </div>
             <div class="menu" id="menu">
                 <div>
-                    <a id="link-menu" onclick="clicanolinkmenu();" href="#services">Serviços</a>
-                    <a id="link-menu" onclick="clicanolinkmenu();" href="#are">Quem somos</a>
-                    <a id="link-menu" onclick="clicanolinkmenu();" href="#footer">Contato</a>
+                    <a id="home" href="#home">Home</a>
+                    <a id="services" href="#services">Serviços</a>
+                    <a id="are" href="#are">Quem somos</a>
+                    <a id="footer" href="#footer">Contato</a>
                 </div>
             </div>
             <div class="login-area">
@@ -53,9 +54,15 @@
 
             <div class="content-home">
                 <div class="carousel" id="carousel">
-                    <img id="img-carousel" src="assets/img/banner/deezer.png" alt="img-carousel">
-                    <img id="img-carousel" src="assets/img/banner/ixcsoft.jpg" alt="img-carousel">
-                    <img class="img-carousel" src="assets/img/banner/looke.jpg" alt="img-carousel">
+                    <div data-js="carousel-item" class="carousel-item">
+                        <img id="img-carousel" src="assets/img/banner/deezer.png" alt="img-carousel">
+                    </div>
+                    <div data-js="carousel-item" class="carousel-item">
+                        <img id="img-carousel" src="assets/img/banner/ixcsoft.jpg" alt="img-carousel">
+                    </div>
+                    <div data-js="carousel-item" class="carousel-item">
+                        <img class="img-carousel" src="assets/img/banner/looke.jpg" alt="img-carousel">
+                    </div>
                     <div class="buttons" id="slide-buttons"></div>
                 </div>
                 <div class="container-info">
@@ -77,19 +84,8 @@
             <div class="shadow"></div>
             <div class="text-service">Serviços Disponíveis</div>
             <div class="all-cards">
-                <div class="card">
-                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
-                    <div id="text-body-card">
-                        <span>Serviço de streaming de músicas</span>
-                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
-                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
-                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
-                            maxime?</p>
-                        <div class="area-access">
-                            <a href="">Saiba mais</a>
-                            <button id="btn-access">Acesse</button>
-                        </div>
-                    </div>
+                <div class="slideleft">
+                    <button></button>
                 </div>
                 <div class="card">
                     <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
@@ -188,6 +184,23 @@
                             <button id="btn-access">Acesse</button>
                         </div>
                     </div>
+                </div>
+                <div class="card">
+                    <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                    <div id="text-body-card">
+                        <span>Serviço de streaming de músicas</span>
+                        <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit. Possimus, culpa excepturi. Nulla quo sint dignissimos architecto dolores
+                            neque nihil, ab assumenda ratione vero, rerum, sapiente quasi harum repellat! Veritatis,
+                            maxime?</p>
+                        <div class="area-access">
+                            <a href="">Saiba mais</a>
+                            <button id="btn-access">Acesse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideright">
+                    <button></button>
                 </div>
 
 
@@ -218,73 +231,50 @@
         </section>
 
         <footer id="footer">
-            <img src="assets/img/logo/background4.jpg" alt="" id="background-img-footer">
-            <div class="shadow"></div>
-            <div class="data">
-                <table>
-                    <tr>
-                        <th colspan="2">
-                            <h3>Serviços</h3>
-                        </th>
-                        <th>
-                            <h3>Redes Sociais</h3>
-                        </th>
-                        <th>
-                            <h3>Contato</h3>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="">IXCsoft</a>
-                        </td>
-                        <td>
-                            <a href="">Voale</a>
-                        </td>
-                        <td>
-                            <a class="link-imgs" href="">
-                                <img src="assets/img/icon/facebook.png" alt="">
-                            </a>
-                            <a class="link-imgs" href="">
-                                <img src="assets/img/icon/instagram.png" alt="">
-                            </a>
-                            <a class="link-imgs" href="">
-                                <img src="assets/img/icon/twitter.png" alt="">
-                            </a>
-                        </td>
-                        <td>
-                            <div class="link-contato">
-                                <a id="contato" href="">
-                                    <img class="img-contato" src="assets/img/icon/contato.png" alt="">
-                                    (63) 99999 - 9999
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="">
-                                <a href="">Looke</a>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="">
-                                <a href="">Deezer</a>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <div class="link-contato">
-                                <a id="contato" href="">
-                                    <img class="img-contato" src="assets/img/icon/contato.png" alt="">
-                                    (63) 99999 - 9999
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                </ul>
-            </div>
 
+            <!-- <div class="shadow"></div> -->
+            <div class="data">
+                <div class="titles">
+                    <div class="title-services item">
+                        <h2>Serviços</h2>
+                        <div class="grid-title-services">
+                            <div class="separator">
+                                <div class="item_service"><a href="">ixcsoft</a> </div>
+                                <div class="item_service"><a href="">Looke</a> </div>
+                            </div>
+                            <div class="separator">
+                                <div class="item_service"><a href="">voale</a></div>
+                                <div class="item_service"><a href="">Deezer</a></div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="title-social item">
+                        <h2>Redes Sociais</h2>
+                        <div class="grid-title-social">
+                            <div>
+                                <div><img src="assets/img/icon/facebook.png" alt=""></div>
+                                <div><img src="assets/img/icon/instagram.png" alt=""></div>
+                                <div><img src="assets/img/icon/twitter.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-contacts item">
+                        <h2>Contatos</h2>
+                        <div>
+                            <div>
+                                <div>
+                                    <img src="assets/img/icon/contato.png" alt="">
+                                    <p>(99) 99999-9999</p>
+                                </div>
+                                <div>
+                                    <img src="assets/img/icon/contato.png" alt="">
+                                    <p>(99) 99999-9999</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="info-bottom">
                 <div> Powered by IDCorpBrasil ©️2021 Todos os direitos reservados. </div>
             </div>

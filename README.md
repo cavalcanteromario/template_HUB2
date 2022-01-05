@@ -1,1 +1,1 @@
-# template_HUB2
+# Template Hub2

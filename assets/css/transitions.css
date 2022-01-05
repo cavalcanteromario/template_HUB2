@@ -1,88 +1,54 @@
-@-webkit-keyframes headerScrollUp {
+.slide-down {
+  -webkit-animation: slide-down 2s linear forwards;
+          animation: slide-down 2s linear forwards;
+}
+
+.slide-up {
+  -webkit-animation: slide-up 2s linear forwards;
+          animation: slide-up 2s linear forwards;
+}
+
+@-webkit-keyframes slide-down {
   from {
-    opacity: 0;
-    top: -50px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   to {
-    opacity: 1;
-    top: 0px;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
 }
 
-@keyframes headerScrollUp {
+@keyframes slide-down {
   from {
-    opacity: 0;
-    top: -50px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   to {
-    opacity: 1;
-    top: 0px;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
 }
 
-@-webkit-keyframes headerScrollDown {
+@-webkit-keyframes slide-up {
   from {
-    opacity: 0;
-    top: -50px;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
   to {
-    opacity: 1;
-    top: 0px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes headerScrollDown {
+@keyframes slide-up {
   from {
-    opacity: 0;
-    top: -50px;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
   to {
-    opacity: 1;
-    top: 0px;
-  }
-}
-
-@-webkit-keyframes slideLeft {
-  from {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.11);
-  }
-  to {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.11);
-  }
-  to {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@-webkit-keyframes slideRight {
-  from {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.11);
-  }
-  to {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.11);
-  }
-  to {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=transitions.css.map */

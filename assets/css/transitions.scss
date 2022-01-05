@@ -1,19 +1,19 @@
-// Animation to scroll header
-@keyframes headerScrollUp {
-    from { opacity: 0; top: -50px;}
-    to {opacity: 1; top: 0px;}
-}
-@keyframes headerScrollDown {
-    from { opacity: 0; top: -50px;}
-    to {opacity: 1; top: 0px;}
+.slide-down {
+    animation: slide-down 2s linear forwards;
 }
 
-@keyframes slideLeft {
-    from {opacity: 0; background-color: rgba(0, 0, 0, 0.11);}
-    to {opacity: 1; background-color:rgba(0, 0, 0, 0.5);}
+.slide-up {
+    animation: slide-up 2s linear forwards;
 }
 
-@keyframes slideRight {
-    from {opacity: 0; background-color: rgba(0, 0, 0, 0.11);}
-    to {opacity: 1; background-color:rgba(0, 0, 0, 0.5);}
+@keyframes slide-down {
+    from {transform: translateY(0);}
+    to {transform: translateY(100%);}
 }
+
+@keyframes slide-up {
+    from {transform: translateY(100%);}
+    to {transform: translateY(0);}
+}
+
+

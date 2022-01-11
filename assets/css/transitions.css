@@ -1,36 +1,14 @@
-.slide-down {
-  -webkit-animation: slide-down 2s linear forwards;
-          animation: slide-down 2s linear forwards;
+.headerFixedUp {
+  -webkit-animation: headerScrollUp .3s ease forwards;
+          animation: headerScrollUp .3s ease forwards;
 }
 
-.slide-up {
-  -webkit-animation: slide-up 2s linear forwards;
-          animation: slide-up 2s linear forwards;
+.headerFixedDown {
+  -webkit-animation: headerScrollDown .3s ease forwards;
+          animation: headerScrollDown .3s ease forwards;
 }
 
-@-webkit-keyframes slide-down {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-}
-
-@keyframes slide-down {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-}
-
-@-webkit-keyframes slide-up {
+@-webkit-keyframes headerScrollUp {
   from {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
@@ -41,10 +19,32 @@
   }
 }
 
-@keyframes slide-up {
+@keyframes headerScrollUp {
   from {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes headerScrollDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes headerScrollDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
     -webkit-transform: translateY(0);

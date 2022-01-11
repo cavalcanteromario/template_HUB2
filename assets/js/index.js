@@ -3,65 +3,101 @@
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
 
-    if (scroll > 0) {
-        var teste = document.getElementById("home").scrollTop = 0;
-    }
+    var div = $("#services");
+    var offset = div.offset();
+    var topo = offset.top;
 
-    if (scroll > 700) {
+    if (scroll >= topo) {
         document.querySelector("header").style.position = "fixed";
+        document.querySelector("header").classList.remove("headerFixedDown");
         document.querySelector("header").classList.add("headerFixedDown");
-        document.querySelector("header").classList.remove("headerFixedUp");
-
-        // sublinhado nos links
-        document.getElementById("services").style.textDecoration = "underline";
-
     } else {
         document.querySelector("header").style.position = "absolute";
         document.querySelector("header").classList.remove("headerFixedDown");
-        document.querySelector("header").classList.add("headerFixedUp");
-
-        // sublinhado nos links
-        document.getElementById("services").style.textDecoration = "none";
     }
 });
 
-var btn_close_about = document.getElementById('btn-close-about');
+
+// Anima transição de menu scroll
+
+$(".menu a").click(function (e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+        targetOffset = $(id).offset().top;
+    $('html, body').animate({
+        scrollTop: targetOffset
+    }, 500);
+});
 
 
+// slide menu Mobile
 
+var btn = document.getElementById('label-menu');
+var menu = document.getElementById('menu');
+var loginArea = document.getElementById('login-area');
 
+var link = document.querySelectorAll('#links-menu a');
 
-// --------------------------------------------------------
-// pegar posição da div
-function getPosicaoElemento(elemID) {
-    var offsetTrail = document.getElementById(elemID);
-    var offsetLeft = 0;
-    var offsetTop = 0;
-    while (offsetTrail) {
-        offsetLeft += offsetTrail.offsetLeft;
-        offsetTop += offsetTrail.offsetTop;
-        offsetTrail = offsetTrail.offsetParent;
-    }
-    if (navigator.userAgent.indexOf("Mac") != -1 &&
-        typeof document.body.leftMargin != "undefined") {
-        offsetLeft += document.body.leftMargin;
-        offsetTop += document.body.topMargin;
-    }
-    return {
-        left: offsetLeft,
-        top: offsetTop
-    };
+function slideMenu() {
+
+    // add e remove class show/hide de menu links
+    menu.classList.contains('showMobile') ? (
+        menu.classList.remove('hideMobile')
+    ) : (
+        menu.classList.add('showMobile')
+    );
+    // add e remove class togglerDown/togglerUp e hide/show de menu links
+    menu.classList.contains('togglerDown') ? (
+        menu.classList.remove('togglerDown'),
+        menu.classList.remove('hideMobile'),
+        menu.classList.add('togglerUp')
+    ) : (
+        menu.classList.add('togglerDown'),
+        menu.classList.remove('togglerUp'),
+        menu.classList.remove('togglerUp')
+    );
+
+    loginArea.classList.contains('showMobile') ? (
+        loginArea.classList.remove('hideMobile')
+    ) : (
+        loginArea.classList.add('showMobile')
+    );
+    // // add e remove togglerDown/togglerUp e remove hide de menu links
+    loginArea.classList.contains('togglerDown') ? (
+        loginArea.classList.remove('togglerDown'),
+        loginArea.classList.remove('hideMobile'),
+        loginArea.classList.add('togglerUp')
+    ) : (
+        loginArea.classList.add('togglerDown'),
+        loginArea.classList.remove('togglerUp'),
+        loginArea.classList.remove('hideMobile')
+    );
 }
 
-//EXEMPLO CHAMADA
-// alert("esquerda:" + getPosicaoElemento("about").left)
-// alert("topo:" + getPosicaoElemento("about").top) 
-var posTop = getPosicaoElemento('about').top;
-
-if (posTop >= 233) {
-    btn_close_about.classList.remove('show');
-    btn_close_about.classList.add('hide')
+function slideMenuToggleButton() {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        slideMenu();
+    })
 }
 
 
-var about = document.getElementById('about');
+// click no link o menu fecha
+
+function linksMenuSlide() {
+    link[0].addEventListener('click', () => {
+        slideMenu();
+    })
+    link[1].addEventListener('click', () => {
+        slideMenu();
+    })
+    link[2].addEventListener('click', () => {
+        slideMenu();
+    })
+    link[3].addEventListener('click', () => {
+        slideMenu();
+    })
+}
+
+linksMenuSlide();
+slideMenuToggleButton();

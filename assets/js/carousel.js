@@ -1,33 +1,44 @@
-// var proximaImagem = 1;
-// var zIndexAtual = 0;
-// var imagens = document.getElementById("container").children;
+$num = $('.my-card').length;
+$even = $num / 2;
+$odd = ($num) / 2;
 
-// function avancarImagem() {
-//     imagem = imagens[proximaImagem];
-//     imagem.style.zIndex = ++zIndexAtual;
-//     imagem.style.marginLeft = "0%";
+if ($num % 2 == 0) {
+    $('.my-card:nth-child(' + $even + ')').addClass('active');
+    $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+    $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+} else {
+    $('.my-card:nth-child(' + $odd + ')').addClass('active');
+    $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+    $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+}
 
-//     proximaImagem++;
+$('.my-card').click(function () {
+    $slide = $('.active').width();
 
-//     if (proximaImagem >= imagens.length) {
-//         proximaImagem = 0;
-//     }
+    if ($(this).hasClass('next')) {
+        $('.card-carousel').stop(false, true).animate({
+            left: '-=' + $slide
+        });
+    } else if ($(this).hasClass('prev')) {
+        $('.card-carousel').stop(false, true).animate({
+            left: '+=' + $slide
+        });
+    }
 
-//     setTimeout(resetarImagens, 10000);
-// }
+    $(this).removeClass('prev next');
+    $(this).siblings().removeClass('prev active next');
 
-// function resetarImagens() {
-//     imagemVisivel = proximaImagem - 1;
+    $(this).addClass('active');
+    $(this).prev().addClass('prev');
+    $(this).next().addClass('next');
+});
 
-//     if (imagemVisivel < 0) {
-//         imagemVisivel = imagens.length - 1;
-//     }
 
-//     for (var i = 0; i < imagens.length; i++) {
-//         if (i != imagemVisivel) {
-//             imagens[i].style.marginLeft = "100%";
-//         }
-//     }
-// }
-
-// var intervalo = setInterval(avancarImagem, 6000);
+// Keyboard nav
+$('html body').keydown(function (e) {
+    if (e.keyCode == 37) { // left
+        $('.active').prev().trigger('click');
+    } else if (e.keyCode == 39) { // right
+        $('.active').next().trigger('click');
+    }
+});

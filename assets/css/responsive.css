@@ -1,20 +1,27 @@
 @media only screen and (max-width: 600px) {
   main header {
     width: 100%;
-    -ms-grid-columns: 1fr 6fr;
-        grid-template-columns: 1fr 6fr;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
         grid-template-areas: "a b b" "d d d" "c c c";
+    padding: .5rem 1rem;
+    z-index: 10;
   }
   main header .logo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: a;
-    background-color: rgba(48, 82, 233, 0.1);
+    z-index: 1;
+  }
+  main header .logo div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   main header .btn-toggler {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: b;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,6 +33,7 @@
         -ms-flex-align: center;
             align-items: center;
     padding: 4% 4%;
+    z-index: 1;
   }
   main header .btn-toggler input {
     position: absolute;
@@ -71,12 +79,12 @@
     top: 8px;
   }
   main header .menu {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
     grid-area: c;
     padding: 0;
-    display: block !important;
+    z-index: 0;
+    display: none;
   }
   main header .menu div {
     display: block;
@@ -100,6 +108,11 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: d;
+    z-index: 0;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   main header .login-area #access {
     width: 30%;
@@ -123,152 +136,177 @@
     padding: 2.5%;
   }
   main .home {
-    display: none;
-  }
-  main .home .phrase {
-    padding: 5%;
-    font-size: clamp(1px, 1rem, 15px);
-  }
-  main .home .content-home {
+    display: block;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  main .home .content-home .right-info {
-    padding: 5%;
+  main .home .card-carousel {
+    max-width: 100%;
+    padding-left: 33%;
+    padding-top: 10%;
+    height: 45%;
+    position: none;
   }
-  main .home .content-home .right-info .container-info .info h1 {
-    padding: 0;
-    font-size: clamp(1px, 1.2rem, 18px);
+  main .home .card-carousel .my-card {
+    min-width: 130px;
+    height: 40%;
   }
-  main .home .content-home .right-info .container-info .info p {
-    font-size: clamp(1px, 1rem, 15px);
-    padding: 5% 0;
+  main .home .info-carousel {
+    position: relative;
+    max-width: none;
+    width: 100%;
+    height: 55%;
+    top: 0%;
+    right: 0;
+    padding: 2%;
+  }
+  main .home .info-carousel h2 {
+    text-align: center;
+  }
+  main .home .info-carousel p {
+    padding: 0 5%;
+    font-size: 13px;
+    text-align: justify;
   }
   main .services {
-    display: none;
+    padding: 22% 0 0 0 !important;
   }
   main .services .text-service {
-    font-size: clamp(1px, 1.2rem, 18px);
+    font-size: clamp(1px, 0.9rem, 18px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 20px;
   }
-  main .are {
-    display: none;
+  main .services .all-cards {
+    padding: 0 15%;
   }
-  main footer {
-    display: none;
-  }
-  .hide {
-    display: none;
-  }
-  .show {
+  main .services .all-cards .slide-card {
+    height: 100%;
+    padding: 2%;
     display: block;
   }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  main header {
-    -ms-grid-columns: 1fr 6fr;
-        grid-template-columns: 1fr 6fr;
-        grid-template-areas: "a b b" "d d d" "c c c";
+  main .services .all-cards .slide-card .card {
+    min-width: clamp(1px, 100%, 120px);
+    max-width: clamp(1px, 100vw, 250px);
+    height: clamp(1px, 100vh, 260px);
+    display: block;
+    margin: 2rem auto;
   }
-  main header .logo {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: a;
-    background-color: rgba(48, 82, 233, 0.1);
+  main .services .all-cards .slide-card .card #header-card {
+    height: 50%;
   }
-  main header .btn-toggler {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-area: b;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+  main .services .all-cards .slide-card .card #text-body-card {
+    padding: 2%;
+    height: 50%;
+    overflow: auto;
+  }
+  main .services .all-cards .slide-card .card #text-body-card span {
+    font-size: .64rem !important;
+    padding: 0 5%;
+  }
+  main .services .all-cards .slide-card .card #text-body-card span b {
+    color: green;
+    margin-left: 5px;
+    text-align: justify;
+  }
+  main .services .all-cards .slide-card .card #text-body-card p {
+    font-size: .6rem;
+    padding: 3% 5%;
+  }
+  main .services .all-cards .slide-card .card #text-body-card .area-access {
+    padding: 2% 0 0 0;
+  }
+  main .services .all-cards .slide-card .card #text-body-card .area-access a {
+    font-size: .6rem;
+    border-radius: 4px;
+  }
+  main .services .all-cards .slide-card .card #text-body-card .area-access button {
+    font-size: .6rem;
+    border-radius: 4px;
+  }
+  main .services .all-cards .slide-card::-webkit-scrollbar {
+    width: 0px;
+  }
+  main .are {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .1fr .1fr;
+        grid-template-rows: .1fr .1fr;
+    padding: 30% 0 0 0;
+  }
+  main .are .whoweare {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .are .whoweare div {
+    width: 100%;
+  }
+  main .are .whoweare div #question {
+    font-size: 1.3rem;
+    padding: 0 5%;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px black;
+  }
+  main .are .whoweare div #text {
+    font-size: .8rem;
+    padding: 5% 5% 2% 5%;
+  }
+  main .are .img-whoweare {
+    padding: 5% 2%;
+    background-color: transparent;
+  }
+  main footer .data {
+    padding-top: 25%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 2%;
   }
-  main header .btn-toggler input {
-    position: absolute;
-    opacity: 0;
+  main footer .data .titles {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a a" "b c";
+    padding: 0 3%;
   }
-  main header .btn-toggler label {
-    cursor: pointer;
-    position: relative;
-    display: block;
-    width: 30px;
-    height: 22px;
-  }
-  main header .btn-toggler label span {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 5px;
-    border-radius: 30px;
-    background-color: #f16234;
-    -webkit-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
-  }
-  main header .btn-toggler label span:nth-child(1) {
-    top: 0;
-  }
-  main header .btn-toggler label span:nth-child(2) {
-    top: 8px;
-  }
-  main header .btn-toggler label span:nth-child(3) {
-    top: 16px;
-  }
-  main header .btn-toggler input:checked + label span:nth-child(1) {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    top: 8px;
-  }
-  main header .btn-toggler input:checked + label span:nth-child(2) {
-    opacity: 0;
-  }
-  main header .btn-toggler input:checked + label span:nth-child(3) {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 8px;
-  }
-  main header .menu {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: c;
+  main footer .data .titles .title-services {
     padding: 0;
-    display: block !important;
   }
-  main header .menu div {
-    display: block;
-    padding: 2%;
-    background-color: #e4e4e4;
+  main footer .data .titles .title-services .grid-title-services {
+    padding: 0;
   }
-  main header .menu div a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100% !important;
-    background-color: #cccccc;
-    padding: 3%;
-    margin: .1%;
+  main footer .data .titles .title-services .grid-title-services .separator {
+    padding: 0;
   }
-  main header .login-area {
-    border-radius: 0;
-    background-color: #e4e4e4;
-    padding: 5% 2%;
+  main footer .data .titles .title-services .grid-title-services .separator .item_service {
+    width: 90%;
+    margin: 5px auto;
+    background-color: #f1f1f121;
+    border-radius: 4px;
+  }
+  main footer .data .titles .title-services .grid-title-services .separator .item_service a {
+    font-size: .8rem;
+  }
+  main footer .data .titles .a {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: a;
+  }
+  main footer .data .titles .b {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: d;
+    grid-area: b;
   }
-  main header .login-area #access {
-    width: 30%;
-    height: 100%;
+  main footer .data .titles .c {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: c;
+  }
+  main footer .data .titles .title-social .grid-title-social a div {
+    border-radius: 4px;
+    padding: 3% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -278,58 +316,219 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 5px;
-    background-color: orange;
   }
-  main header .login-area #register {
-    background-color: mediumseagreen;
-    height: 100%;
-    width: 30%;
-    padding: 2.5%;
+  main footer .data .titles .title-social .grid-title-social a div img {
+    width: clamp(1px, 13%, 100px);
   }
-  main .home .phrase {
-    padding: 5%;
-    font-size: clamp(1px, 1rem, 15px);
+  main footer .data .titles .title-contacts div div {
+    padding: 0;
   }
-  main .home .content-home {
+  main footer .data .titles .title-contacts div div div {
+    margin-bottom: 10px;
+    padding: 3%;
+    border-radius: 4px;
+  }
+  main footer .data .titles .title-contacts div div div img {
+    width: 10%;
+  }
+  main footer .data .titles .title-contacts div div div p {
+    font-size: .8rem;
+  }
+  main footer .data .titles .item h2 {
+    font-size: .8rem;
+    background-color: rgba(236, 236, 236, 0.151);
+    padding: 10px 0;
+    color: #e9e9e9;
+    text-shadow: none;
+  }
+  main footer .info-bottom div {
+    font-size: .6rem;
+  }
+  .hideMobile {
+    display: none !important;
+  }
+  .showMobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .togglerUp {
+    -webkit-animation: togglerUp .5s ease forwards;
+            animation: togglerUp .5s ease forwards;
+  }
+  .togglerDown {
+    -webkit-animation: togglerDown .5s ease forwards;
+            animation: togglerDown .5s ease forwards;
+  }
+  @-webkit-keyframes togglerUp {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(105%);
+              transform: translateX(105%);
+    }
+  }
+  @keyframes togglerUp {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(105%);
+              transform: translateX(105%);
+    }
+  }
+  @-webkit-keyframes togglerDown {
+    from {
+      -webkit-transform: translateX(105%);
+              transform: translateX(105%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes togglerDown {
+    from {
+      -webkit-transform: translateX(105%);
+              transform: translateX(105%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  main .home {
+    display: block;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    height: 940px;
   }
-  main .home .content-home .right-info {
-    padding: 5%;
+  main .home .card-carousel {
+    max-width: 100%;
+    padding-left: 25%;
+    padding-top: 10%;
+    height: 45%;
+    position: none;
   }
-  main .home .content-home .right-info .container-info .info h1 {
-    padding: 0;
-    font-size: clamp(1px, 1.2rem, 18px);
+  main .home .card-carousel .my-card {
+    min-width: 200px;
+    height: 50%;
   }
-  main .home .content-home .right-info .container-info .info p {
-    font-size: clamp(1px, 1rem, 15px);
-    padding: 5% 0;
+  main .home .info-carousel {
+    position: relative;
+    max-width: none;
+    width: 100%;
+    height: 55%;
+    top: 0%;
+    right: 0;
+    padding: 2%;
+  }
+  main .home .info-carousel h2 {
+    text-align: center;
+    font-size: 22px !important;
+  }
+  main .home .info-carousel p {
+    padding: 0 5%;
+    font-size: 15px;
+    text-align: justify;
+  }
+  main .services {
+    height: 940px;
+    padding: 22% 0 0 0 !important;
   }
   main .services .text-service {
-    font-size: clamp(1px, 1.2rem, 18px);
+    font-size: clamp(1px, 0.9rem, 18px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 20px;
   }
   main .services .all-cards {
-    padding: 2% 0;
+    padding: 0 15%;
   }
-  main .services .all-cards .card {
-    width: 200px;
-    height: 200px;
-    margin: .5rem;
+  main .services .all-cards .slide-card {
+    height: 100%;
+    padding: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .services .all-cards .slide-card .card {
+    min-width: clamp(1px, 100%, 120px);
+    max-width: clamp(1px, 100vw, 250px);
+    height: clamp(1px, 100vh, 260px);
+    display: block;
+    margin: 2rem auto;
+  }
+  main .services .all-cards .slide-card .card #header-card {
+    height: 50%;
+  }
+  main .services .all-cards .slide-card .card #text-body-card {
+    padding: 2%;
+    height: 50%;
+    overflow: auto;
+  }
+  main .services .all-cards .slide-card .card #text-body-card span {
+    font-size: .64rem !important;
+    padding: 0 5%;
+  }
+  main .services .all-cards .slide-card .card #text-body-card span b {
+    color: green;
+    margin-left: 5px;
+    text-align: justify;
+  }
+  main .services .all-cards .slide-card .card #text-body-card p {
+    font-size: .6rem;
+    padding: 3% 5%;
+  }
+  main .services .all-cards .slide-card .card #text-body-card .area-access {
+    padding: 2% 0 0 0;
+  }
+  main .services .all-cards .slide-card .card #text-body-card .area-access a {
+    font-size: .6rem;
+    border-radius: 4px;
+  }
+  main .services .all-cards .slide-card .card #text-body-card .area-access button {
+    font-size: .6rem;
+    border-radius: 4px;
+  }
+  main .services .all-cards .slide-card::-webkit-scrollbar {
+    width: 0px;
   }
   main .are {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    padding: 0 !important;
+    height: 940px;
+    padding: 0 4% 0 8%;
   }
-  main footer {
-    display: none;
+  main .are .whoweare {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .hide {
-    display: none;
+  main .are .whoweare div {
+    width: 100%;
   }
-  .show {
-    display: block;
+  main .are .whoweare div #question {
+    font-size: 1.3rem;
+    padding: 0 5%;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px black;
+  }
+  main .are .whoweare div #text {
+    font-size: .8rem;
+    padding: 5% 5% 2% 5%;
+  }
+  main .are .img-whoweare {
+    padding: 5% 2%;
+    background-color: transparent;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

@@ -1,19 +1,18 @@
-.slide-down {
-    animation: slide-down 2s linear forwards;
+// Efeito navbar slide no scroll
+
+.headerFixedUp {
+    animation: headerScrollUp .3s ease forwards;
+}
+.headerFixedDown {
+    animation: headerScrollDown .3s ease forwards;
 }
 
-.slide-up {
-    animation: slide-up 2s linear forwards;
-}
-
-@keyframes slide-down {
-    from {transform: translateY(0);}
-    to {transform: translateY(100%);}
-}
-
-@keyframes slide-up {
+@keyframes headerScrollUp {
     from {transform: translateY(100%);}
     to {transform: translateY(0);}
 }
-
+@keyframes headerScrollDown {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0);}
+}
 

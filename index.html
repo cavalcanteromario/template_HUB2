@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/carousel.css">
 </head>
 
-<body>
+<body onselectstart="return false">
     <main>
         <header>
             <div class="logo">
@@ -40,27 +40,17 @@
                 </div>
             </div>
             <div class="login-area" id="login-area">
-                <a id="access" href="">Login</a>
+                <a id="access">Login</a>
                 <button id="register">Cadastre-se</button>
             </div>
-            
+
         </header>
 
         <section class="home" id="home">
 
             <div class="card-carousel">
                 <div class="my-card"></div>
-                <div class="my-card">
-                    <div class="roof">
-                        <div class="about hide slide-" id="about">
-                            <button class="show" id="btn-close-about"><img src="assets/img/icon/close.png"
-                                    alt=""></button>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores eius ipsa dignissimos
-                            inventore illum fuga sunt excepturi dolorem consequatur eaque, id voluptatum facilis tempore
-                            voluptatem perferendis, mollitia et sint deserunt!
-                        </div>
-                    </div>
-                </div>
+                <div class="my-card"><div><img src="assets/img/card/deezer.png" alt=""></div></div>
                 <div class="my-card"></div>
                 <div class="my-card"></div>
             </div>
@@ -77,6 +67,41 @@
                 </p>
 
             </div>
+            <div class="tab-login hide" id="tab-login">
+
+                <form action="./logado.html">
+                    <div class="input-error ">
+                        <div class="messenger-error">Usuário Inexistente !</div>
+                        <div class="messenger-error hide">Senha Incorreta !</div>
+                    </div>
+                    <div class="input">
+                        <input class="input-login" id="input-user" type="text" placeholder="Login">
+                        <span>
+                            <img class="icon-input" src="/assets/img/icon/lock-solid.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="input">
+                        <input class="input-login" id="input-password" type="password" placeholder="Senha">
+                        <span>
+                            <img class="icon-input" src="/assets/img/icon/lock-solid.svg" alt="">
+                        </span>
+                    </div>
+
+                    <div class="forgot">
+                        <div>
+                            <input type="checkbox" id="check">
+                            <label for="check" id="label-check">Lembrar-me</label>
+                        </div>
+                        <button id="btn-login">Entrar</button>
+                    </div>
+                    <div class="container-forgot-my-password">
+                        <span id="span-forgot-passord">
+                            <a href="">Esqueci minha senha!</a>
+                        </span>
+                    </div>
+                </form>
+
+            </div>
 
 
         </section>
@@ -84,7 +109,7 @@
         <section class="services" id="services">
             <div class="text-service">Serviços Disponíveis</div>
             <div class="all-cards">
-                
+
                 <div class="slide-card" id="slide-card">
 
                     <div class="card">
@@ -92,15 +117,15 @@
                         <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
 
                         <div id="text-body-card">
-                            <span>SERVIÇO DE STREAMING DE MÚSICAS 
+                            <span>SERVIÇO DE STREAMING DE MÚSICAS
                             </span>
                             <p>Com mais de 73 milhões de faixas em todo o mundo.
-                               
+
                             </p>
                             <div class="area-access">
                                 <a href="">Saiba mais</a>
                                 <button id="btn-access">Acesse</button>
-                            </div>                       
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -118,12 +143,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                        <div id="header-card"><img src="assets/img/banner/voale.png" alt=""></div>
                         <div id="text-body-card">
                             <span>Serviço de streaming de músicas</span>
                             <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Harum nobis eveniet, facilis nemo consequuntur perspiciatis
-                                dignissimos, voluptate ullam expedita cumque, est assumenda possimus sit animi consectetur
+                                consectetur adipisicing elit. Harum nobis eveniet, facilis nemo consequuntur
+                                perspiciatis
+                                dignissimos, voluptate ullam expedita cumque, est assumenda possimus sit animi
+                                consectetur
                                 dolorem natus quaerat iure.
                             </p>
                             <div class="area-access">
@@ -133,12 +160,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div id="header-card"><img src="assets/img/banner/deezer.png" alt=""></div>
+                        <div id="header-card"><img src="assets/img/banner/ixcsoft.jpg" alt=""></div>
                         <div id="text-body-card">
                             <span>Serviço de streaming de músicas</span>
                             <p>Com mais de 73 milhões de faixas em todo o mundo. Lorem, Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Harum nobis eveniet, facilis nemo consequuntur perspiciatis
-                                dignissimos, voluptate ullam expedita cumque, est assumenda possimus sit animi consectetur
+                                consectetur adipisicing elit. Harum nobis eveniet, facilis nemo consequuntur
+                                perspiciatis
+                                dignissimos, voluptate ullam expedita cumque, est assumenda possimus sit animi
+                                consectetur
                                 dolorem natus quaerat iure.
                             </p>
                             <div class="area-access">
@@ -147,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
 
@@ -225,22 +254,16 @@
         </footer>
     </main>
 
-    <script src = "https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src = "https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
     </script>
-
     <!-- script -->
     <script src="assets/js/index.js"></script>
-
     <!-- carousel slide -->
     <script src="assets/js/carousel.js"></script>
-
-    
-
 </body>
 
 </html>

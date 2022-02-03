@@ -101,3 +101,20 @@ function linksMenuSlide() {
 
 linksMenuSlide();
 slideMenuToggleButton();
+
+
+
+
+function loginDropDown() {
+    var loginArea = document.getElementById("tab-login");
+    loginArea.classList.contains("hide") ? (
+        loginArea.classList.remove("hide")
+    ):(
+        loginArea.classList.add("hide")
+    );
+}
+
+var btnLogin = document.getElementById("access");
+btnLogin.addEventListener('click', () => {
+    loginDropDown();
+})

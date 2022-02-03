@@ -106,6 +106,10 @@ main {
                 text-decoration: none;
                 color: rgb(228, 228, 228);
                 margin-right: 10%;
+                cursor: pointer;
+                // background-color: red;
+                
+
             }
 
             #register {
@@ -145,8 +149,130 @@ main {
         color: white;
         overflow: hidden;
         position: relative;
-        // background-image: linear-gradient(to top, rgb(75, 193, 247), rgb(29, 29, 255));
         background-image: linear-gradient(to top, rgb(114, 179, 209), rgb(68, 68, 214));
+
+        .card-carousel {
+
+            .my-card {
+
+                div {
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .tab-login {
+            width: clamp(0px, 100%, 300px);
+            // height: clamp(0px, 100%, 253px);
+            max-width: clamp(0px, 100%, 300px);
+            // max-height: clamp(0px, 100%, 253px);
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 7%;
+            right: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 15px;
+            z-index: 10;
+            box-shadow: 1px 1px 4px black;
+
+            form {
+                padding: 1%;
+
+                .input-error {
+                    background-color: rgb(211, 0, 0);
+                    border-radius: 5px;
+                    margin-bottom: 5px;
+
+                    .messenger-error {
+                        display: flex;
+                        justify-content: center;
+                        padding: clamp(5px, 1%, 5px) 0;
+                        color: white;
+                        font-size: clamp(9px, 1vw, 13px);
+                    }
+                }
+
+                .input {
+                    position: relative;
+
+                    #input-user {}
+
+                    #input-password {}
+
+                    span {
+                        .icon-input {
+                            width: 4%;
+                            float: right;
+                            top: 38%;
+                            right: 5%;
+                            position: absolute;
+                        }
+                    }
+                }
+
+                .input-login {
+                    width: 100%;
+                    padding: 10px 40px 10px 20px;
+                    border-radius: 5px;
+                    border: none;
+                    margin: 5px 0;
+                    box-shadow: .1px .1px 2px black;
+                }
+
+                .forgot {
+                    display: flex;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0;
+                    justify-content: space-between;
+                    margin-top: 5px;
+
+                    #check {
+                        color: black;
+                        margin-right: 5px;
+                    }
+
+                    #label-check {
+                        color: black;
+                        font-size: clamp(9px, 1vw, 13px);
+                    }
+
+                    #btn-login {
+                        width: 35%;
+                    }
+
+                    #btn-login:hover {
+                        background-color: lightseagreen;
+                        border-color: lightseagreen;
+                        border-radius: 2px;
+                    }
+                }
+
+                .container-forgot-my-password {
+                    padding: 10px 0 0 0;
+                    display: flex;
+                    justify-content: center;
+
+                    #span-forgot-passord {
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-size: clamp(9px, .6vw, 13px);
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .services {
@@ -184,7 +310,7 @@ main {
             overflow: auto;
             display: flex;
 
-            
+
             .slide-card {
                 width: 100%;
                 height: 100%;
@@ -497,7 +623,9 @@ main {
                                 justify-content: center;
                                 align-items: center;
 
-                                img {width: clamp(20px, 4%, 40px)}
+                                img {
+                                    width: clamp(20px, 4%, 40px)
+                                }
                             }
                         }
                     }
@@ -520,8 +648,6 @@ main {
                     }
                 }
             }
-
-
         }
 
         .info-bottom {
@@ -573,4 +699,5 @@ body::-webkit-scrollbar-thumb {
 
 body {
     scrollbar-width: 5px !important;
+
 }
